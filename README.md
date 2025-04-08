@@ -20,7 +20,7 @@ SQL Tool: MySQL Workbench
 Before data analysis I created a new schema named mlb_analysis and uploaded the following tables provided in the course: players, salaries, school_details and schools.
 Each data table is consited with the following variables and data types:
 
-![image](https://github.com/user-attachments/assets/9090135f-7379-4ff1-b062-229e590c6cbc)
+![image](https://github.com/user-attachments/assets/2de9a13a-a1eb-429a-b579-b99a2a133911)
 
 ## Data Analysis
 
