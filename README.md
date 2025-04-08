@@ -112,7 +112,7 @@ FROM total_spent;
 
 ![image](https://github.com/user-attachments/assets/70faccaa-e1a5-4d47-aa84-82507a357475)
 
-*table continues for all temas*
+*...table continues for all teams*
 
 c) Return the first year that each team's cumulative spending surpassed 1 billion
 
@@ -156,6 +156,8 @@ FROM	players
 ORDER BY career_length DESC;
 ```
 
+![image](https://github.com/user-attachments/assets/3e0f4403-a264-45a5-b031-869b68faef5f)
+
 b) What team did each player play on for their starting and ending years?
 
 ```sql
@@ -172,6 +174,8 @@ FROM players LEFT JOIN salaries AS ss
 					   ON players.playerID = se.playerID
                        AND YEAR(players.finalGame) = se.yearID;
 ```
+
+![image](https://github.com/user-attachments/assets/1e95c2af-f106-42ab-8baa-57f814b10d09)
 
 c) How many players started and ended on the same team and also played for over a decade?
 
@@ -191,6 +195,8 @@ SELECT COUNT(*)
 FROM PT
 WHERE team_start = team_end AND career_length >= 10;
 ```
+
+![image](https://github.com/user-attachments/assets/d2f07c98-0d61-4978-9e62-b38fa7070c38)
 
 ### Objective 4: Player Comparison Analysis
 Using the Sean Lahman Baseball Database, complete the following steps:
@@ -218,6 +224,10 @@ WHERE (LENGTH(players) - LENGTH(REPLACE(players,",","")) + 1) > 1
 	  AND birthdate IS NOT NULL;
 ```
 
+![image](https://github.com/user-attachments/assets/3f995489-f712-4789-a6b1-fe3c1d9a1791)
+
+*...table continues for all players*
+
 b) Create a summary table that shows for each team, what percent of players bat right, left and both.
 
 ```sql
@@ -236,6 +246,8 @@ SELECT teamID,
 FROM player_bat
 GROUP BY teamID;
 ```
+
+![image](https://github.com/user-attachments/assets/3723c8a4-6975-4c06-9387-baf9e19b60d7)
 
 c) How have average height and weight at debut game changed over the years, and what's the decade-over-decade difference?
 
@@ -264,4 +276,5 @@ SELECT decade, weight_avg, height_avg,
 FROM davgs;
 ```
 
+![image](https://github.com/user-attachments/assets/2ed54c8e-8d7f-4dcf-a77e-c07f4bd538a0)
 
