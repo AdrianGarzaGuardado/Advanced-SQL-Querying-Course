@@ -5,7 +5,7 @@ Final project of the **SQL for Data Analysis: Advanced SQL Querying Techniques**
 You’ve just been hired as a Data Analyst Intern for Major League Baseball (MLB), who has recently gotten access to a large amount of historical player data.
 
 ## Assignment
-You have access to decades worth of data including player statistics like schools attended, salaries, teams played for, height and weight, and more
+You have access to decades worth of data including player statistics like schools attended, salaries, teams played for, height and weight, and more.
 Your task is to use advanced SQL querying techniques to track how player statistics have changed over time and across different teams in the league.
 
 ## Objectives
@@ -32,6 +32,8 @@ GROUP BY decade
 ORDER BY decade;
 ```
 
+![image](https://github.com/user-attachments/assets/c20fc50e-aa69-46d2-bdb9-f07cf7d8a791)
+
 b) What are the names of the top 5 schools that produced the most players?
 
 ```sql
@@ -43,6 +45,8 @@ GROUP BY school_details.name_full
 ORDER BY num_players DESC
 LIMIT 5;
 ```
+
+![image](https://github.com/user-attachments/assets/22ab68f6-b57e-45c4-82d6-956ac15bfff4)
 
 c) For each decade, what were the names of the top 3 schools that produced the most players?
 
@@ -63,6 +67,8 @@ SELECT *
 FROM schools_rank
 WHERE top_school <= 3;
 ```
+
+![image](https://github.com/user-attachments/assets/f7e3ea50-f733-4439-8929-b254d431e73c)
 
 ### Objective 2: Salary Analysis
 Using the Sean Lahman Baseball Database, complete the following steps:
@@ -89,6 +95,8 @@ FROM top_salary
 WHERE pct_spend = 1;
 ```
 
+![image](https://github.com/user-attachments/assets/d53159bf-c72e-4ae9-9b4f-aa0ff57663c5)
+
 b) For each team, show the cumulative sum of spending over the years
 
 ```sql
@@ -101,6 +109,10 @@ SELECT teamID, yearID, anual_spend,
 	   SUM(anual_spend) OVER(PARTITION BY teamID ORDER BY yearID) AS run_sum
 FROM total_spent;
 ```
+
+![image](https://github.com/user-attachments/assets/70faccaa-e1a5-4d47-aa84-82507a357475)
+
+*table continues for all temas*
 
 c) Return the first year that each team's cumulative spending surpassed 1 billion
 
@@ -123,6 +135,8 @@ SELECT teamID, yearID, run_sum
 FROM fst_billion
 WHERE run_conditional =1;
 ```
+
+![image](https://github.com/user-attachments/assets/261b88a8-ce3d-439e-8de7-27eb9b6c8940)
 
 ### Objective 3: Player Career Analysis
 Using the Sean Lahman Baseball Database, complete the following steps:
