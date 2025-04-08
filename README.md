@@ -8,12 +8,21 @@ You’ve just been hired as a Data Analyst Intern for Major League Baseball (MLB
 You have access to decades worth of data including player statistics like schools attended, salaries, teams played for, height and weight, and more.
 Your task is to use advanced SQL querying techniques to track how player statistics have changed over time and across different teams in the league.
 
-## Objectives
 Analyse the provided datasets to answer the questions:
 1.	What schools do MLB players attend?
 2.	How much do teams spend on player salaries?
 3.	What does each player’s career look like?
 4.	How do player attributes compare?
+
+## Data Collection
+SQL Tool: MySQL Workbench
+
+Before data analysis I created a new schema named mlb_analysis and uploaded the following tables provided in the course: players, salaries, school_details and schools.
+Each data table is consited with the following variables and data types:
+
+![image](https://github.com/user-attachments/assets/9090135f-7379-4ff1-b062-229e590c6cbc)
+
+## Data Analysis
 
 ### Objective 1: School Analysis
 Using the Sean Lahman Baseball Database, answer the following questions:
